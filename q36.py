@@ -9,4 +9,4 @@ else:
 
 
 
-git remote add origin https://github.com/harshit-avisoft/python-2.git
+git config --global user.email "harshit.pandey@avisoft.io"
