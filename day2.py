@@ -26,7 +26,7 @@ while(value=="Y"):
         print("updated data .... \n")
         for n, g in zip(Name, Grades):
          print(f"{n} : {g}")
-        value=input("\npress N to exit and Y to continue...") 
+        value=input("\n press N to exit and Y to continue...") 
     else:
          print("invalid grades not allowed")
 
