@@ -16,7 +16,7 @@ while(value=="Y"):
 
  if user_data==1:
     name1=input("enter your name : ")
-    # print("The valid grades are A B C D E F")
+    print("The valid grades are A B C D E F")
     grade1=input("enter your grade : ")
     print("\n")
     
