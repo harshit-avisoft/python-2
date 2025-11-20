@@ -30,7 +30,9 @@ contacts = {
 value="Y"
 
 while value=="Y":
-    print("\n\n\n")
+    print("\n\n")
+    print("------Contact record updation dashboard------")
+    print("\n")
     print("1. To Display All Contacts")
     print("2. search by contact name")
     print("3. search by city")
@@ -141,11 +143,3 @@ while value=="Y":
 
     value=input("\npress N to exit and Y to continue...").upper()
     print("exited succesfully")
-
-
-
-
-
-
-
-
