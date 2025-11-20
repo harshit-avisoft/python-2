@@ -129,7 +129,15 @@ while value=="Y":
         name=input("Enter name whose details need to be updated: ")
         if name in contacts:
             phone = input("Enter phone number: ")
+
+            while not phone.isdigit() :
+                 print("Please enter digits only!")
+                 phone = input("Enter phone number: ")
+                 
             email = input("Enter email: ")
+            while "@" not in email:
+                print("enter valid email ")
+                email = input("Enter email: ")
             city = input("Enter city: ")
 
             contacts[name] = {
