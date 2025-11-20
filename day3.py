@@ -37,9 +37,9 @@ while value=="Y":
     print("4. search by partial name")
     print("5. add a new contact")
     print("6. update an existing contact")
-    print("7. delete a contact")
+    print("7. delete a contact ")
     print("\n")
-    user_data=int(input("enter your choice : "))
+    user_data=int(input("enter your choice [1-7] : "))
 
     if user_data==1:
         for Name in contacts.keys():
@@ -94,10 +94,10 @@ while value=="Y":
                 print("Email:", details["email"])
                 print("City:", details["city"])
                 print("---------------------")
-                found=True
+                temp=True
         
         if temp==False:
-                print("not found ")
+                print(" name not found ")
 
     if user_data==5:
         name=input("Enter new name: ")
@@ -140,6 +140,7 @@ while value=="Y":
             print("Contact deleted successfully")
 
     value=input("\npress N to exit and Y to continue...").upper()
+    print("exited succesfully")
 
 
 
