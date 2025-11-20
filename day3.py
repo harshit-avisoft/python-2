@@ -32,7 +32,7 @@ value="Y"
 while value=="Y":
     print("\n\n")
     print("------Contact record updation dashboard------")
-    print("\n")
+    # print("\n")
     print("1. To Display All Contacts")
     print("2. search by contact name")
     print("3. search by city")
@@ -107,7 +107,15 @@ while value=="Y":
             print("Name already exists")
         else:
             phone = input("Enter phone number: ")
+
+            while not phone.isdigit() :
+                 print("Please enter digits only!")
+                 phone = input("Enter phone number: ")
+
             email = input("Enter email: ")
+            while "@" not in email:
+                print("enter valid email ")
+                email = input("Enter email: ")
             city = input("Enter city: ")
 
             contacts[name] = {
