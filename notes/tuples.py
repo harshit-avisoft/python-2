@@ -78,3 +78,4 @@
 # thistuple = (1,3,7,8,5,4,6,8,5)
 # x= thistuple.index(8)
 
+# len, indexing , if y in tuple, del , unpacking , loops , + , count , index

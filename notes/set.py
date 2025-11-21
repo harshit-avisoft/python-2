@@ -108,3 +108,4 @@
 # Frozenset Methods
 # Being immutable means you cannot add or remove elements. However, frozensets support all non-mutating operations of sets.
 
+# len , loops , add , update , remove , clear , pop , del , union , + , intersection , & , - , ^ , 

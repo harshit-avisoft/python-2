@@ -136,3 +136,9 @@
 
 # list1.extend(list2)
 
+
+# Return the number of times the value 5 appears in a list:
+# thistuple = [1, 3, 7, 8, 7, 5, 4, 6, 8, 5]
+# x = thistuple.count(5)
+
+# len,indexing, if y in list , insert, append , extend ,remove ,pop, del , clear , loops , copy ,  + , count
