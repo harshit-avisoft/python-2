@@ -41,14 +41,14 @@ def counter():
 
 
 def random_name():
-    quotes = []
+    names = []
     num=int(input("enter the number of names to be filled"))
     print(f"Enter {num} names:")
     for i in range(num):
         q = input(f"name {i+1}: ")
-        quotes.append(q)
+        names.append(q)
 
-    selected = random.choice(quotes)
+    selected = random.choice(names)
     return f"Randomly selected name: \"{selected}\""
 
 def calculate_log():
