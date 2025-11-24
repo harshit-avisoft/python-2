@@ -59,7 +59,7 @@ def calculate_log():
     return f"log base of {base} of {num}= {log:.3f}"
 
 def perfect_square():
-    num = int(input("Enter a number to check: "))
+    num = int(input("Enter a number to check perfect square: "))
     root = math.sqrt(num)
     if root.is_integer():
         print(f"{num} is a perfect square (√{num} = {int(root)})")

@@ -1,0 +1,27 @@
+[
+    {
+        "Name": "Harshit",
+        "Department": "IT",
+        "salary": "30000"
+    },
+    {
+        "Name": "Aman",
+        "Department": "Mechanical",
+        "salary": "35000"
+    },
+    {
+        "Name": "Raj",
+        "Department": "Civil",
+        "salary": "40000"
+    },
+    {
+        "Name": "Ravi",
+        "Department": "Electrical",
+        "salary": "45000"
+    },
+    {
+        "Name": "Chandan",
+        "Department": "Agriculture",
+        "salary": "50000"
+    }
+]
