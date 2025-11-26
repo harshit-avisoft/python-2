@@ -1,6 +1,6 @@
 # Bank Management System
 class Bank:
-    def __init__(self,account_number,account_holder_name,balance=0):
+    def __init__(self,account_number,account_holder_name="",balance=0):
        self.account_number=account_number
        self.account_holder_name=account_holder_name
        self.balance=balance
@@ -9,13 +9,18 @@ class Bank:
     def deposit(self, amount) :
         if(amount>0):
             self.balance+=amount
+            print(f"You deposited {amount} succesfully ")
         else:
             print("amount must be positive")
+
+
     def withdraw(self, amount):
         if(self.balance>=amount):
             self.balance-=amount
+            print(f"You withrawed {amount} succesfully ")
         else:
             print(f"your {amount} is greater than balance")
+
 
     def check_balance(self):
         print(self.balance)
@@ -37,12 +42,16 @@ while(temp=="y"):
  print("3: Check balance: ")
  num=input("enter your choice(1/2/3) ")
  while num not in ("1","2","3"):
-     print("Invalid Choice! please select from the menu")
+     print("\nInvalid Choice! please select from the menu")
      num=input("Enter valid choice(1/2/3) ")
 
 
  if num=="1":
     account_number=int(input("\nEnter your account number: "))
+    while account_number not in thisdict:
+        print("Invalid account number")
+        account_number=int(input("Enter your account number again: "))
+
     if account_number in thisdict:
         amount=input("Enter amount to deposit: ")
         while not amount.isdigit():
@@ -56,6 +65,10 @@ while(temp=="y"):
 
  if num=="2":
     account_number=int(input("\nEnter your account number: "))
+    while account_number not in thisdict:
+        print("Invalid account number")
+        account_number=int(input("Enter your account number again: "))
+
     if account_number in thisdict:
         amount=input("Enter amount to withdraw: ")
         while not amount.isdigit():
@@ -69,6 +82,10 @@ while(temp=="y"):
 
  if num=="3":
     account_number=int(input("\nEnter your account number: "))
+    while account_number not in thisdict:
+        print("Invalid account number")
+        account_number=int(input("Enter your account number again: "))
+
     if account_number in thisdict:
        thisdict[account_number].check_balance()
     temp = input("Do you want to continue? (y/N): ").strip().lower()
