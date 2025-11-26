@@ -7,10 +7,15 @@ class Bank:
     
     
     def deposit(self, amount) :
-        self.balance+=amount
-   
+        if(amount>0):
+            self.balance+=amount
+        else:
+            print("amount must be positive")
     def withdraw(self, amount):
-        self.balance-=amount
+        if(self.balance>=amount):
+            self.balance-=amount
+        else:
+            print(f"your {amount} is greater than balance")
 
     def check_balance(self):
         print(self.balance)
@@ -24,28 +29,46 @@ thisdict={
     acc2.account_number:acc2,
     acc3.account_number:acc3
 }
-print("Enter 1 deposit: ")
-print("Enter 2 to withdraw: ")
-print("Enter 3 to check balance: ")
-num=int(input("enter your choice: "))
+temp="y"
+while(temp=="y"):
+ print("\n=====Menu=====")
+ print("1: Deposit: ")
+ print("2: Withdraw: ")
+ print("3: Check balance: ")
+ num=input("enter your choice(1/2/3) ")
+ while num not in ("1","2","3"):
+     print("Invalid Choice! please select from the menu")
+     num=input("Enter valid choice(1/2/3) ")
 
-if num==1:
+
+ if num=="1":
     account_number=int(input("\nEnter your account number: "))
     if account_number in thisdict:
-        amount=int(input("Enter amount to deposit: "))
+        amount=input("Enter amount to deposit: ")
+        while not amount.isdigit():
+              amount=input("Enter valid amount to deposit: ")
+        amount=int(amount)
         thisdict[account_number].deposit(amount)
     else:
         print("invalid account number")
+    temp = input("Do you want to continue? (y/N): ").strip().lower()
 
-if num==2:
+
+ if num=="2":
     account_number=int(input("\nEnter your account number: "))
     if account_number in thisdict:
-        amount=int(input("Enter amount to deposit: "))
+        amount=input("Enter amount to withdraw: ")
+        while not amount.isdigit():
+              amount=input("Enter valid amount to withdraw: ")
+        amount=int(amount)
         thisdict[account_number].withdraw(amount)
     else:
         print("invalid account number")
+    temp = input("Do you want to continue? (y/N): ").strip().lower()
 
-if num==3:
+
+ if num=="3":
     account_number=int(input("\nEnter your account number: "))
     if account_number in thisdict:
        thisdict[account_number].check_balance()
+    temp = input("Do you want to continue? (y/N): ").strip().lower()
