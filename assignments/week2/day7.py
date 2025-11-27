@@ -176,4 +176,4 @@ while temp=="y":
             d.details()
 
 
- temp=input("\ndo you want to continue:(y/n): ")
+ temp=input("\ndo you want to continue:(y/n): ").lower()
