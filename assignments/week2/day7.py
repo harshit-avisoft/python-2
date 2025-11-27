@@ -27,12 +27,9 @@ class ProgrammingCourse(Course):
     def __init__(self, course_name, instructor, duration, platform,language,difficulty_level):
         super().__init__(course_name, instructor, duration, platform)
 
-        
         self.language=language
-        
         self.difficulty_level=difficulty_level
         
-
     def update_language(self):
         language=input("enter a language: ")
         languages=["Python","Java","Cpp","C Sharp"]
@@ -52,7 +49,7 @@ class DsaCourse(Course):
         self.difficulty_level=difficulty_level
         self.practice_platform=practice_platform
     
-    def update_practice_platform(self,practice_platform):
+    def update_practice_platform(self):
         practice_platforms=["leetcode","gfg","hackerank","hackerearth"]
         practice_platform=input("enter practice_platform :")
         while practice_platform not in practice_platforms:
@@ -60,21 +57,23 @@ class DsaCourse(Course):
         self.practice_platform=practice_platform
 
     def update_duration(self, new_duration):
+            while not duration.isdigit():
+                duration=int(input("Enter duration again: "))
             self.duration=new_duration
-            print(f"your updated duration is {self.duration}")
+            print(f"your updated duration is {self.duration} hrs")
 
     def details(self):
             print(f" \n course_name: {self.course_name} \n instructor: {self.instructor} \n duration: {self.duration} \n platform: {self.platform} \n practice_platform: {self.practice_platform}" )
 
-
-print("=====Menu=====")
-print("1. Create course")
-print("2. Update Course Details")
-print("3. Display Details")
-print("4. exit")
-choice1=int(input("Enter your choice(1/2/3/4): "))
+p=None
+d=None
 temp="y"
 while temp=="y":
+ print("\n=====Menu=====")
+ print("1. Create course")
+ print("2. Update Course Details")
+ print("3. Display Details")
+ choice1=int(input("Enter your choice(1/2/3): "))
  if choice1==1:
     print("1. Create Programming Course")
     print("2. Create DSA Course")
@@ -129,15 +128,52 @@ while temp=="y":
 
         d=DsaCourse(course_name,instructor,duration,platform,language,difficulty_level,practice_platform)
         d.details()
+ 
+ if choice1 == 2:
+    print("1. Update duration")
+    print("2. Update language")
+    print("3. Update practice-platform")
+    choice2 = int(input("Enter your choice(1/2/3): "))
 
- if choice1==3:
-        print("1. Show programming course details")
-        print("2. Show DSA course details")
-        choice2=int(input("Enter your choice: "))
-        if choice2==1:
-            p1=ProgrammingCourse()
-            p1.details()
-        if choice2==2:
-            d1=DsaCourse()
-            d1.details()
- temp=input("do you want to continue:(y/n): ")
+    if choice2 == 1:
+        if p is None and d is None:
+            print("No course created yet!")
+        elif p is not None:
+            duration = int(input("Enter new duration: "))
+            p.update_duration(duration)
+        else:
+            duration = int(input("Enter new duration: "))
+            d.update_duration(duration)
+
+    if choice2 == 2:
+        if p is None:
+            print("Programming course not created yet!")
+        else:
+            p.update_language()
+
+    if choice2 == 3:
+        if d is None:
+            print("DSA course not created yet!")
+        else:
+            d.update_practice_platform()
+
+     
+ if choice1 == 3:
+    print("1. Show programming course details")
+    print("2. Show DSA course details")
+    choice2 = int(input("Enter your choice: "))
+
+    if choice2 == 1:
+        if p is None:
+            print("Programming course not created yet!")
+        else:
+            p.details()
+
+    if choice2 == 2:
+        if d is None:
+            print("DSA course not created yet!")
+        else:
+            d.details()
+
+
+ temp=input("\ndo you want to continue:(y/n): ")
