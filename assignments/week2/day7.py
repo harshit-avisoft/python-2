@@ -67,21 +67,30 @@ class DsaCourse(Course):
 
 p=None
 d=None
+
 temp="y"
 while temp=="y":
+ 
  print("\n=====Menu=====")
  print("1. Create course")
  print("2. Update Course Details")
  print("3. Display Details")
- choice1=int(input("Enter your choice(1/2/3): "))
+
+ choice1=input("Enter your choice(1/2/3): ")
+ while not choice1.isdigit() or int(choice1) not in [1,2,3]:
+     choice1=input("Enter only valid choice(1/2/3): ")
+ choice1=int(choice1)
+
  if choice1==1:
     print("1. Create Programming Course")
     print("2. Create DSA Course")
     choice2=int(input("Enter your choice(1/2): "))
+
     if choice2==1:
         course_name=input("Enter course name: ")
         instructor=input("Enter instructor name: ")
         duration=int(input("Enter duration of course: "))
+
         platform=input("Enter platform name: ")
         platforms=["Physics Wallah","Udemy","Coursera","Vedantu","Unacademy"]
         while platform not in platforms:
@@ -105,6 +114,7 @@ while temp=="y":
         course_name=input("Enter course name: ")
         instructor=input("Enter instructor name: ")
         duration=int(input("Enter duration of course: "))
+
         platform=input("Enter platform name: ")
         platforms=["Physics Wallah","Udemy","Coursera","Vedantu","Unacademy"]
         while platform not in platforms:
@@ -147,7 +157,7 @@ while temp=="y":
 
     if choice2 == 2:
         if p is None:
-            print("Programming course not created yet!")
+            print("no course not created yet!")
         else:
             p.update_language()
 
