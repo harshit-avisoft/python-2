@@ -16,9 +16,9 @@ def get_age():
 
     age = int(age_input)
     if age < 0:
-        raise negativeage("age cannot be negative")
+        raise NegativeAge("age cannot be negative")
     if age>150:
-        raise overage("Don't exists normally\n")
+        raise OverAge("Don't exists normally\n")
     return age
 
 def get_favourite_number():

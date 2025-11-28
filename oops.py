@@ -1,14 +1,2 @@
-class Person:
-  def __init__(self, fname, lname):
-    pass
-  def printname(self):
-    print(self.firstname, self.lastname)
+import re
 
-class Student(Person):
-  def __init__(self, fname, lname):
-    self.firstname = fname
-    self.lastname = lname
-    
-
-x = Student("Mike", "Olsen")
-x.printname()

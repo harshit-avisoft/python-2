@@ -1,4 +1,4 @@
-from validators import (
+from validate import (
     NegativeAge, OverAge,
     get_name, get_age, get_favourite_number
 )
@@ -63,8 +63,10 @@ def main():
  try:
     with open(file_name,"r") as f:
         content=f.read()
-        print("\n-----File contents-----")
+        print("\n-----File contents-----\n")
+        print("=======================================================\n")
         print(content)
+        print("=======================================================\n")
 
  except FileNotFoundError:
     print("No such File found\n")
@@ -73,7 +75,7 @@ def main():
  except Exception as e:
     print(e)
  finally:
-    print("\nfile operation done: \n\n")
+    print("\nfile closed: \n\n")
 
 
 
