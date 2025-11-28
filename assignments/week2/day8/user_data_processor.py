@@ -1,10 +1,7 @@
-# Custom Exception
-class negativeage(Exception):
-    pass
-
-class overage(Exception):
-    pass
-
+from validators import (
+    NegativeAge, OverAge,
+    get_name, get_age, get_favourite_number
+)
 
 
 def main():
@@ -17,9 +14,7 @@ def main():
  print("\n===================Menu===================\n")
  # name
  try:
-    name=input("Please enter your name: ")
-    if not name.isalpha() :
-        raise ValueError("Name should only include alphabet")
+    name=get_name()
  except ValueError as e:
     print("Invalid name✘: ",e,"\n")
     name=None
@@ -27,16 +22,10 @@ def main():
 
  # age
  try:
-    age_input = input("Please enter your age: ")
-
-    age = int(age_input)
-    if age < 0:
-        raise negativeage("age cannot be negative")
-    if age>150:
-        raise overage("Don't exists normally\n")
- except negativeage as e:
+    age_input = get_age()
+ except NegativeAge as e:
     print("Invalid age✘:",e)
- except overage as e:
+ except OverAge as e:
     print("Invalid age✘:",e)
  except ValueError:
     print("Invalid age✘: Age must be integer\n")
@@ -44,8 +33,7 @@ def main():
 
  # favourite number
  try:
-    favourite_number=input("Please enter your favourite number: ")
-    favourite_number=float(favourite_number)
+    favourite_number=get_favourite_number()
  except TypeError:
     print("Number must be valid!!")
  except OverflowError:
