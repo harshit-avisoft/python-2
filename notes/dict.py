@@ -119,3 +119,5 @@
 #   for y in obj:
 #     print(y + ':', obj[y])
 
+temp=int(input("enter"))
+print(5+temp)

@@ -1,57 +1,82 @@
 import re
 
-def word_presence_checker():
 # 1
- sentence=input("Enter a sentence: ")
- word=input("Enter a word to search for: ")
- pattern=rf"\b{word}\b"
- match=re.search(pattern,sentence)
- if match:
-    print(f"Yes the word {word} exists in the sentence: ")
- else:
-    print(f"The word {word} not exists in the sentence: ")
+def word_presence_checker():
+    sentence = input("Enter a sentence: ")
+    word = input("Enter a word to search for: ")
+    if sentence == "" or word == "":
+        print("Invalid input")
+    else:
+        pattern = rf"\b{word}\b"
+        match = re.search(pattern, sentence)
+        if match:
+            print(f"Yes, the word '{word}' exists in the sentence.")
+        else:
+            print(f"The word '{word}' does not exist in the sentence.")
 
-
-def number_extraction():
 # 2
- sentence=input("Enter a sentence: ")
- integers=re.findall(r"[\b][\d+][\b]",sentence)
- for integer in integers:
-    print(integer)
+def number_extraction():
+    sentence = input("Enter a sentence: ")
+    integers = re.findall(r"\b\d+\b", sentence)
+    integers = list(map(int, integers))
+    print("Extracted integers:", integers)
 
-
-
-def extract_patterns():
 # 3
- sentence=input("Enter a sentence: ")
- pattern1=r"Order ID\s*:\s*([\w]+-(\d+))"
- pattern2=r"warehouse\s*(\d+)"
- warehouses=re.findall(pattern2,sentence)
- orders=re.findall(pattern1,sentence)
- for order in orders:
-    print(order[0])
+def extract_patterns():
+    sentence = input("Enter a sentence: ")
+    pattern1 = r"Order ID\s*:\s*([A-Za-z]+-\d+)"
+    pattern2 = r"warehouse\s*(\d+)"
+    warehouses = re.findall(pattern2, sentence)
+    orders = re.findall(pattern1, sentence)
+    print("Order IDs:", orders)
+    print("Warehouses:", warehouses)
 
- for warehouse in warehouses:
-    print(warehouse)
-
-
-def clean_up():
 # 4
- sentence=input("Enter a sentence: ")
- sentence=re.sub(r'\W'," ",sentence)
- sentence=re.sub(r'\s+'," ",sentence)
- print(sentence)
+def clean_up():
+    sentence = input("Enter a sentence: ")
+    sentence = re.sub(r'\W', " ", sentence)
+    sentence = re.sub(r'\s+', " ", sentence)
+    print("Cleaned sentence:", sentence)
 
-
-
-def email_validation():
 # 5
- email=input("Please enter valid email: ")
- pattern=r'^[\w][\w\W]*@[\w\W]*[\.]+[\w\W]*'
- match=re.search(pattern,email)
+def email_validation():
+    email = input("Please enter a valid email: ")
+    pattern = r'^[\w][\w\W]*@[\w\W]*[\.]+[\w\W]*'
+    match = re.search(pattern, email)
 
- if match:
-    print("Your email is valid: ")
- else:
-    print("Invalid email entered: ")
- print("hi")
+    if match:
+        print("Your email is valid.")
+    else:
+        print("Invalid email entered.")
+
+
+def menu():
+  while True:
+    print("\n----- MENU -----")
+    print("1. Word Checker")
+    print("2. Extract Number")
+    print("3. Extract Patterns")
+    print("4. Clean Up ")
+    print("5. Validate email")
+    print("6. Exit")
+
+    choice = input("Enter your choice (1-6): ")
+
+    if choice == "1":
+        word_presence_checker()
+    elif choice == "2":
+        number_extraction()
+    elif choice == "3":
+        extract_patterns()
+    elif choice == "4":
+        clean_up()
+    elif choice == "5":
+        email_validation()
+    elif choice == "6":
+        print("Exiting program...")
+        break
+    else:
+        print("Invalid choice! Please enter a number from 1 to 6.")
+
+# Run the menu
+menu()

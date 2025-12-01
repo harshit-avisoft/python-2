@@ -1,12 +1,6 @@
-from day9 import(
-    word_presence_checker,number_extraction,
-    extract_patterns,clean_up,
-    email_validation
-)
+import re
 
+text = "#python is awesome! I also like #coding"
 
-word_presence_checker()
-number_extraction()
-extract_patterns()
-clean_up()
-email_validation()
+temp=re.findall(r"^#\w+", text)
+print(temp)
