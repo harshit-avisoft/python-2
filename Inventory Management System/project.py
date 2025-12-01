@@ -110,3 +110,21 @@ def generate_inventory_report():
 
 def display_inventory():
     print(json.dumps(product_dictionary, indent=4))
+
+
+# error handling
+def validate_product_data(product_data):
+    pass
+
+def validate_quantity_input(quantity):
+    if type(quantity)!=int and quantity<=0:
+        return False
+    return True
+
+def validate_price_input(price_str):
+    if type(price_str)!=float:
+        return False
+    return True
+
+def validate_date_Input(date_str):
+    pass
