@@ -20,7 +20,7 @@ product_dictionary={
     }
 }
 
-transaction_list=[{"transaction_ID":10},{"transaction_type":"STOCK_ADD"},{"product_id":1},{"quantity_changed":5},{"timestamp":"2015-12-01"},{"previous_quantity":2}]
+transaction_list=[]
 
 def add_new_product():
     new_product=input("Enter name of the product: ")
