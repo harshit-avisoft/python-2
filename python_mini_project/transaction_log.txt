@@ -1,0 +1,6 @@
+{"transaction_id": 1, "transaction_type": "STOCK_ADD", "product_id": 1, "quantity_changed": 5, "timestamp": "2025-12-03", "previous_quantity": 14}
+{"transaction_id": 1, "transaction_type": "STOCK_ADD", "product_id": 4, "quantity_changed": 6, "timestamp": "2025-12-03", "previous_quantity": 30}
+{"transaction_id": 2, "transaction_type": "NEW_ITEM", "product_id": 29, "quantity_changed": 2, "timestamp": "2025-12-03", "previous_quantity": 0}
+{"transaction_id": 3, "transaction_type": "NEW_ITEM", "product_id": 30, "quantity_changed": 3, "timestamp": "2025-12-03", "previous_quantity": 0}
+{"transaction_id": 4, "transaction_type": "STOCK_ADD", "product_id": 29, "quantity_changed": 9, "timestamp": "2025-12-03", "previous_quantity": 2}
+{"transaction_id": 5, "transaction_type": "DELETE_ITEM", "product_id": 29, "quantity_changed": 0, "timestamp": "2025-12-03", "previous_quantity": 11}

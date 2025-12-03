@@ -1,0 +1,205 @@
+{
+    "1": {
+        "product_name": "Laptop Charger",
+        "category": "Electronics",
+        "current_quantity": 19,
+        "price_per_unit": 799.0,
+        "last_restock_date": "2025-12-03"
+    },
+    "2": {
+        "product_name": "Notebook",
+        "category": "Stationery",
+        "current_quantity": 50,
+        "price_per_unit": 35.0,
+        "last_restock_date": "2025-12-01"
+    },
+    "3": {
+        "product_name": "Pen",
+        "category": "Stationery",
+        "current_quantity": 120,
+        "price_per_unit": 10.0,
+        "last_restock_date": "2025-12-02"
+    },
+    "4": {
+        "product_name": "USB Cable",
+        "category": "Electronics",
+        "current_quantity": 36,
+        "price_per_unit": 120.0,
+        "last_restock_date": "2025-12-03"
+    },
+    "5": {
+        "product_name": "Water Bottle",
+        "category": "Household",
+        "current_quantity": 18,
+        "price_per_unit": 150.0,
+        "last_restock_date": "2025-11-25"
+    },
+    "6": {
+        "product_name": "T-shirt",
+        "category": "Clothing",
+        "current_quantity": 25,
+        "price_per_unit": 299.0,
+        "last_restock_date": "2025-11-20"
+    },
+    "7": {
+        "product_name": "Backpack",
+        "category": "Accessories",
+        "current_quantity": 10,
+        "price_per_unit": 999.0,
+        "last_restock_date": "2025-10-15"
+    },
+    "8": {
+        "product_name": "Mouse",
+        "category": "Electronics",
+        "current_quantity": 14,
+        "price_per_unit": 450.0,
+        "last_restock_date": "2025-11-30"
+    },
+    "9": {
+        "product_name": "Keyboard",
+        "category": "Electronics",
+        "current_quantity": 9,
+        "price_per_unit": 750.0,
+        "last_restock_date": "2025-12-02"
+    },
+    "10": {
+        "product_name": "Coffee Mug",
+        "category": "Kitchen",
+        "current_quantity": 40,
+        "price_per_unit": 120.0,
+        "last_restock_date": "2025-11-18"
+    },
+    "11": {
+        "product_name": "Face Wash",
+        "category": "Personal Care",
+        "current_quantity": 22,
+        "price_per_unit": 180.0,
+        "last_restock_date": "2025-11-26"
+    },
+    "12": {
+        "product_name": "Shampoo",
+        "category": "Personal Care",
+        "current_quantity": 15,
+        "price_per_unit": 250.0,
+        "last_restock_date": "2025-11-16"
+    },
+    "13": {
+        "product_name": "Chips Packet",
+        "category": "Food",
+        "current_quantity": 90,
+        "price_per_unit": 20.0,
+        "last_restock_date": "2025-12-01"
+    },
+    "14": {
+        "product_name": "Chocolate Bar",
+        "category": "Food",
+        "current_quantity": 70,
+        "price_per_unit": 40.0,
+        "last_restock_date": "2025-12-02"
+    },
+    "15": {
+        "product_name": "Soap",
+        "category": "Personal Care",
+        "current_quantity": 55,
+        "price_per_unit": 30.0,
+        "last_restock_date": "2025-12-02"
+    },
+    "16": {
+        "product_name": "LED Bulb",
+        "category": "Electronics",
+        "current_quantity": 35,
+        "price_per_unit": 110.0,
+        "last_restock_date": "2025-11-23"
+    },
+    "17": {
+        "product_name": "Power Bank",
+        "category": "Electronics",
+        "current_quantity": 8,
+        "price_per_unit": 1200.0,
+        "last_restock_date": "2025-11-10"
+    },
+    "18": {
+        "product_name": "Headphones",
+        "category": "Electronics",
+        "current_quantity": 13,
+        "price_per_unit": 850.0,
+        "last_restock_date": "2025-11-29"
+    },
+    "19": {
+        "product_name": "Dish Soap",
+        "category": "Household",
+        "current_quantity": 28,
+        "price_per_unit": 55.0,
+        "last_restock_date": "2025-11-24"
+    },
+    "20": {
+        "product_name": "Socks",
+        "category": "Clothing",
+        "current_quantity": 60,
+        "price_per_unit": 49.0,
+        "last_restock_date": "2025-11-19"
+    },
+    "21": {
+        "product_name": "Notebook Set",
+        "category": "Stationery",
+        "current_quantity": 16,
+        "price_per_unit": 180.0,
+        "last_restock_date": "2025-11-30"
+    },
+    "22": {
+        "product_name": "Hand Sanitizer",
+        "category": "Health",
+        "current_quantity": 25,
+        "price_per_unit": 75.0,
+        "last_restock_date": "2025-11-28"
+    },
+    "23": {
+        "product_name": "Juice Bottle",
+        "category": "Food",
+        "current_quantity": 32,
+        "price_per_unit": 60.0,
+        "last_restock_date": "2025-11-22"
+    },
+    "24": {
+        "product_name": "Sneakers",
+        "category": "Footwear",
+        "current_quantity": 5,
+        "price_per_unit": 1999.0,
+        "last_restock_date": "2025-10-30"
+    },
+    "25": {
+        "product_name": "Gloves",
+        "category": "Clothing",
+        "current_quantity": 18,
+        "price_per_unit": 150.0,
+        "last_restock_date": "2025-11-21"
+    },
+    "26": {
+        "product_name": "books",
+        "category": "study",
+        "current_quantity": 2,
+        "price_per_unit": 200.0,
+        "last_restock_date": "2025-12-02"
+    },
+    "27": {
+        "product_name": "b",
+        "category": "b",
+        "current_quantity": 3,
+        "price_per_unit": 3.0,
+        "last_restock_date": "2025-12-02"
+    },
+    "28": {
+        "product_name": "bat",
+        "category": "sports",
+        "current_quantity": 2,
+        "price_per_unit": 500.0,
+        "last_restock_date": "2025-12-03"
+    },
+    "30": {
+        "product_name": "bat",
+        "category": "sports",
+        "current_quantity": 3,
+        "price_per_unit": 500.0,
+        "last_restock_date": "2025-12-03"
+    }
+}
